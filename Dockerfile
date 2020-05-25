@@ -11,7 +11,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community/" >> /etc/apk/reposi
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 
-RUN apt-get install -y python3
+RUN apk add python3
 
 # Needed by scripts
 ENV OPENVPN /etc/openvpn
